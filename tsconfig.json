@@ -1,0 +1,16 @@
+{
+  "include": ["src", "src/**/*.d.ts", "src/**/*.vue", "*.d.ts"],
+  "compilerOptions": {
+    "target": "esnext",
+    "useDefineForClassFields": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": true,
+    "jsx": "preserve",
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "types": ["vite/client"],
+    "lib": ["esnext"]
+  }
+}
