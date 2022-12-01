@@ -24,7 +24,7 @@ async function exec() {
       '--experimental-json-modules', // use asserts {type :'json'} for import json file
       '--input-type=module',
       '-e',
-    `"${props.content}"`,
+    `"${props.content.replace(/"/g, '\'')}"`,
     ], {
       stdio: 'pipe',
       shell: true,
