@@ -27,7 +27,7 @@ Node.js REPL Terminal. Powered by <a href="https://github.com/vue-terminal/vue-t
 ## 📦 Install
 
 ```sh
-npm install vtui-repl
+npm -g install vtui-repl
 ```
 
 ## 🎮 Usage
