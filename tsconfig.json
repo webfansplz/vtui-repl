@@ -1,6 +1,7 @@
 {
   "include": ["src", "src/**/*.d.ts", "src/**/*.vue", "*.d.ts"],
   "compilerOptions": {
+    "baseUrl": ".",
     "target": "esnext",
     "useDefineForClassFields": true,
     "module": "esnext",
@@ -11,6 +12,11 @@
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "types": ["vite/client"],
-    "lib": ["esnext"]
+    "lib": ["esnext"],
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    }
   }
 }

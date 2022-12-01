@@ -1,4 +1,9 @@
 import { createApp } from 'vue-termui'
 import App from './App.vue'
 
-createApp(App).mount()
+const app = createApp(App)
+app.mount()
+
+process.on('exit', () => {
+  app.unmount()
+})

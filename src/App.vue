@@ -1,19 +1,22 @@
 <script lang="ts" setup>
+import type { KeyDataEvent } from 'vue-termui'
+import Input from '@/components/Input.vue'
+import Output from '@/components/Output.vue'
+const input = ref('')
 
+// Exit the process manually when press ctrl + c
+const stop = onInputData((e) => {
+  const event = e.event as KeyDataEvent
+  if (event!.key === 'C' && event!.ctrlKey) {
+    stop()
+    process.exit(0)
+  }
+})
 </script>
 
 <template>
-  <div
-    :padding="2"
-    :margin="2"
-    width="100%"
-    :maxWidth="50"
-    justifyContent="center"
-    alignItems="center"
-    flexDirection="column"
-    borderColor="yellowBright"
-    borderStyle="round"
-  >
-    <span>hello world</span>
+  <div>
+    <Input v-model="input" />
+    <Output :content="input" />
   </div>
 </template>

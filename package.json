@@ -1,25 +1,47 @@
 {
   "name": "vtui-repl",
-  "private": true,
-  "version": "0.0.0",
   "type": "module",
+  "version": "0.0.3",
+  "description": "Node.js REPL Terminal.",
+  "author": "webfansplz",
+  "license": "MIT",
+  "homepage": "https://github.com/webfansplz/vtui-repl#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webfansplz/vtui-repl.git"
+  },
+  "keywords": [
+    "vue",
+    "terminal",
+    "vue-termui",
+    "repl",
+    "js-repl",
+    "node-repl"
+  ],
   "bin": {
-    "vtui-app": "./dist/main.mjs"
+    "vrepl": "./dist/main.mjs"
   },
   "scripts": {
     "dev": "vtui dev",
-    "build": "vtui build"
+    "build": "vtui build",
+    "lint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx,.md,.json --max-warnings 0 --cache",
+    "lint:fix": "pnpm run lint --fix"
   },
   "dependencies": {
+    "@vue-termui/syntax-highlight": "^0.0.2",
     "@vue/runtime-core": "^3.2.41",
+    "execa": "^6.1.0",
+    "ts-node": "^10.9.1",
     "vue": "^3.2.41",
-    "vue-termui": "*"
+    "vue-termui": "^0.0.17"
   },
   "devDependencies": {
+    "@antfu/eslint-config": "^0.33.0",
     "@types/node": "^18.11.9",
     "@vitejs/plugin-vue": "^3.2.0",
-    "@vue-termui/cli": "*",
+    "@vue-termui/cli": "^0.0.17",
     "@vue/compiler-sfc": "^3.2.41",
+    "eslint": "^8.28.0",
     "typescript": "^4.8.4",
     "unplugin-auto-import": "^0.11.4",
     "unplugin-vue-components": "^0.22.9",
