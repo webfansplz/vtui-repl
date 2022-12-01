@@ -140,6 +140,7 @@ onInputData(({ event }) => {
             && !event.altKey
             && !event.ctrlKey
             && !event.metaKey
+            && !event.shiftKey
           ) {
             text.value
               = text.value.slice(0, cursorPosition.value)
