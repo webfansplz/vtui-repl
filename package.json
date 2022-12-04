@@ -1,7 +1,7 @@
 {
   "name": "vtui-repl",
   "type": "module",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "Node.js REPL Terminal.",
   "author": "webfansplz",
   "license": "MIT",
@@ -19,8 +19,11 @@
     "node-repl"
   ],
   "bin": {
-    "vrepl": "./dist/main.mjs"
+    "vrepl": "./cli.mjs"
   },
+  "files": [
+    "dist/*.mjs"
+  ],
   "scripts": {
     "dev": "vtui dev",
     "build": "vtui build",
