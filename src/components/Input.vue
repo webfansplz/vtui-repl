@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, ref, toRef } from '@vue/runtime-core'
 import SyntaxHighlight from '@vue-termui/syntax-highlight'
-import { isKeyDataEvent, onInputData, useFocus } from 'vue-termui'
+import { isInputDataEvent, isKeyDataEvent, onInputData, useFocus } from 'vue-termui'
 
 const props = withDefaults(
   defineProps<{
@@ -68,16 +68,28 @@ function calcCursorPosition(index: number, type = 'prev') {
   }
 }
 
-onInputData(({ event }) => {
+onInputData((evt) => {
   if (active.value && !disabled.value) {
-    if (isKeyDataEvent(event)) {
+    // windows only
+    if (isInputDataEvent(evt)) {
+      if (evt.data === '\b') {
+        if (cursorPosition.value > 0) {
+          text.value
+              = text.value.slice(0, cursorPosition.value - 1)
+              + text.value.slice(cursorPosition.value)
+          cursorPosition.value--
+        }
+      }
+    }
+    if (isKeyDataEvent(evt.event)) {
+      const event = evt.event
       switch (event.key) {
         case 'Enter':
-          text.value = `${text.value}\n`
+          text.value = `${text.value.slice(0, cursorPosition.value)}` + '\n\n' + `${text.value.slice(cursorPosition.value + 1)}`
           nextTick(() => {
             cursorPosition.value = Math.min(
               text.value.length,
-              cursorPosition.value + 2,
+              cursorPosition.value + 1,
             )
           })
           break
