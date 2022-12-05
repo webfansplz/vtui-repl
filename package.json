@@ -1,7 +1,7 @@
 {
   "name": "vtui-repl",
   "type": "module",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "description": "Node.js REPL Terminal.",
   "author": "webfansplz",
   "license": "MIT",
