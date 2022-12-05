@@ -31,7 +31,7 @@
     "lint:fix": "pnpm run lint --fix"
   },
   "dependencies": {
-    "@vue-termui/syntax-highlight": "^0.0.2",
+    "@vue-termui/syntax-highlight": "^0.0.3",
     "@vue/runtime-core": "^3.2.41",
     "execa": "^6.1.0",
     "ts-node": "^10.9.1",

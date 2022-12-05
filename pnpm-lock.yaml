@@ -5,7 +5,7 @@ specifiers:
   '@types/node': ^18.11.9
   '@vitejs/plugin-vue': ^3.2.0
   '@vue-termui/cli': ^0.0.17
-  '@vue-termui/syntax-highlight': ^0.0.2
+  '@vue-termui/syntax-highlight': ^0.0.3
   '@vue/compiler-sfc': ^3.2.41
   '@vue/runtime-core': ^3.2.41
   eslint: ^8.28.0
@@ -20,7 +20,7 @@ specifiers:
   vue-termui: ^0.0.17
 
 dependencies:
-  '@vue-termui/syntax-highlight': 0.0.2_wg4mfjjv34epu7oiamjazaoxdy
+  '@vue-termui/syntax-highlight': 0.0.3_wg4mfjjv34epu7oiamjazaoxdy
   '@vue/runtime-core': 3.2.45
   execa: 6.1.0
   ts-node: 10.9.1_eoe7put6ewfbqpy6gs36tihw6y
@@ -516,8 +516,8 @@ packages:
       - utf-8-validate
     dev: true
 
-  /@vue-termui/syntax-highlight/0.0.2_wg4mfjjv34epu7oiamjazaoxdy:
-    resolution: {integrity: sha512-ZQec2SDed2tp//JMPZX6KERFWEPJnVMpLC6QgFubWU3ZsD/WykDV637TM/hTY3OqxgPfcmLDQimyP+uBcKDU2g==}
+  /@vue-termui/syntax-highlight/0.0.3_wg4mfjjv34epu7oiamjazaoxdy:
+    resolution: {integrity: sha512-ylXz4lH4I6okqQPhwmJHmxcvXHD0Rd3fsZTSZ3KncR5wIypQHmrKw7DImbkq9FCQxArPRrFhIfXodmZdTPYzjg==}
     peerDependencies:
       '@vue/runtime-core': ^3.2.41
       vue-termui: ^0.0.17
