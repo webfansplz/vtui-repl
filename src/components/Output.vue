@@ -52,10 +52,7 @@ watch(() => props.content, () => {
 
 <template>
   <div
-    :padding="1"
-    :minWidth="30"
-    :minHeight="10"
-    borderStyle="round"
+    class="border-round min-h-10 min-w-30 p-1"
     title="Output"
   >
     <SyntaxHighlight :code="output" lang="js" />

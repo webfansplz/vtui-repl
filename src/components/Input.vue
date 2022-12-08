@@ -169,11 +169,8 @@ onInputData((evt) => {
 <template borderStyle="round">
   <div>
     <div
-      borderStyle="round"
+      class="border-round min-h-10 min-w-30 p-1"
       :borderColor="disabled ? 'gray' : active ? 'transparent' : undefined"
-      :minHeight="10"
-      :minWidth="30"
-      :padding="1"
       title="Input"
     >
       <SyntaxHighlight :code="displayedValue" lang="js" />

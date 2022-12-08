@@ -36,7 +36,7 @@
     "execa": "^6.1.0",
     "ts-node": "^10.9.1",
     "vue": "^3.2.41",
-    "vue-termui": "^0.0.17"
+    "vue-termui": "^0.0.19"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.33.0",
