@@ -1,7 +1,7 @@
 {
   "name": "vtui-repl",
   "type": "module",
-  "version": "0.0.18",
+  "version": "0.0.19",
   "description": "Node.js REPL Terminal.",
   "author": "webfansplz",
   "license": "MIT",
@@ -31,7 +31,7 @@
     "lint:fix": "pnpm run lint --fix"
   },
   "dependencies": {
-    "@vue-termui/syntax-highlight": "^0.0.3",
+    "@vue-termui/syntax-highlight": "^1.0.2",
     "@vue/runtime-core": "^3.2.41",
     "execa": "^6.1.0",
     "ts-node": "^10.9.1",
